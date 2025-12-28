@@ -1,0 +1,32 @@
+{
+  "posts": [
+    {
+      "id": "a868",
+      "title": "learn JAVA",
+      "content": " "
+    },
+    {
+      "id": "4d0d",
+      "title": "GO LANG",
+      "content": "LEARN GO LANG"
+    },
+    {
+      "id": "a44c",
+      "title": "C++",
+      "content": "learn c++",
+      "date": "2025-12-13T03:23:59.060Z"
+    },
+    {
+      "id": "6a61",
+      "title": "CSS",
+      "content": "LEARN CSS",
+      "date": "2025-12-13T03:24:29.099Z"
+    },
+    {
+      "id": "2124",
+      "title": "k",
+      "content": "",
+      "date": "12/12/2025"
+    }
+  ]
+}
