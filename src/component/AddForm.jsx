@@ -23,6 +23,8 @@ export default function AddForm() {
     }).then((data) => {
       // console.log(data);
     });
+
+    event.currentTarget.reset();
   };
   return (
     <Container
