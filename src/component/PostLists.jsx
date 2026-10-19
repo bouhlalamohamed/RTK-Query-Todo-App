@@ -1,14 +1,27 @@
 // import { red } from "@mui/material/colors";
 import { useNavigate } from "react-router-dom";
 import { useGetPostsQuery } from "../../src/app/services/PostApi";
-import { CircularProgress, Box, MenuList, MenuItem, Button } from "@mui/material";
+import {
+  CircularProgress,
+  Box,
+  MenuList,
+  MenuItem,
+  Button,
+} from "@mui/material";
 
 export default function PostLists() {
   const navigate = useNavigate();
   // @ts-ignore
-  const { isLoading, data: posts ,refetch} = useGetPostsQuery(name, {
-    pollingInterval: 100000000,
-  });
+  const {
+    isLoading,
+    data: posts,
+    refetch,
+  } = useGetPostsQuery(
+    { name: "lolo" },
+    {
+      pollingInterval: 100000000,
+    },
+  );
   //  name, {pollingInterval: 3000,
   //  skipPollingIfUnfocused: true,} ===> Automatically refetch every 3s unless the window is out of focus
   const handleIdPost = (id, event) => {
@@ -33,11 +46,20 @@ export default function PostLists() {
   }
 
   return (
-  <div>
-      <MenuList sx={{  width: "200px", background: "rgba(2, 2, 2, 0.91)"  }}>
-    <Button sx={{margin:"0 auto", display:"block", textTransform: 'capitalize'}} onClick={refetch}>refreche</Button>
+    <div>
+      <MenuList sx={{ width: "200px", background: "rgba(2, 2, 2, 0.91)" }}>
+        <Button
+          sx={{
+            margin: "0 auto",
+            display: "block",
+            textTransform: "capitalize",
+          }}
+          onClick={refetch}
+        >
+          refreche
+        </Button>
 
-        {posts.map((item) => (
+        {posts?.map((item) => (
           <MenuItem
             key={item.id}
             onClick={() => {
@@ -54,6 +76,6 @@ export default function PostLists() {
           </MenuItem>
         ))}
       </MenuList>
-  </div>
+    </div>
   );
 }

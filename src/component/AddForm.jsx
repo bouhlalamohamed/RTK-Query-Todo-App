@@ -7,7 +7,7 @@ import {
   Typography,
 } from "@mui/material";
 import { useAddPostMutation } from "../app/services/PostApi";
- 
+
 export default function AddForm() {
   const [addPost, { isLoading, data: posts }] = useAddPostMutation();
 
@@ -19,9 +19,9 @@ export default function AddForm() {
     addPost({
       title: dataForm.get("title"),
       content: dataForm.get("content"),
-      date:new Date().toLocaleDateString(),
+      date: new Date().toLocaleDateString(),
     }).then((data) => {
-      //  console.log(data);
+      // console.log(data);
     });
   };
   return (
